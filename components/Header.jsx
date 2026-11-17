@@ -21,10 +21,16 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // lock page scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+  }, [open]);
+
   return (
     <>
       <div className="topbar">
-        <span>📍 Kashida, Near Women&apos;s College Road, Ghatshila</span>
+        <span className="tb-addr">📍 Kashida, Near Women&apos;s College Road, Ghatshila</span>
+        <span className="tb-short">📍 Kashida, Ghatshila</span>
         <a href={`tel:${site.phoneRaw}`}>📞 96087 75136</a>
       </div>
       <header className={`nav${scrolled ? " scrolled" : ""}`}>
@@ -40,6 +46,7 @@ export default function Header() {
             WhatsApp Us
           </a>
         </nav>
+        <div className={`menu-backdrop${open ? " open" : ""}`} onClick={() => setOpen(false)} />
         <button className={`burger${open ? " open" : ""}`} aria-label="Open menu" onClick={() => setOpen(!open)}>
           <span></span><span></span><span></span>
         </button>

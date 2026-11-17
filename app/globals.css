@@ -304,3 +304,139 @@ details li::marker { color: var(--gold); }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* =====================================================
+   MOBILE-FIRST POLISH (most visitors are on phones)
+   ===================================================== */
+html { -webkit-text-size-adjust: 100%; }
+html, body { overflow-x: clip; }
+a, button { -webkit-tap-highlight-color: transparent; }
+.tb-short { display: none; }
+.menu-backdrop { display: none; }
+.mobile-bar { display: none; }
+
+/* hover effects only on devices that really hover */
+@media (hover: none) {
+  .card:hover, .step:hover { transform: none; }
+  .card:hover .card-img img, .occ:hover img { transform: none; }
+}
+
+@media (max-width: 860px) {
+  .nav { backdrop-filter: none; background: var(--cream); }
+  .menu { z-index: 65; padding-top: 90px; justify-content: flex-start; gap: 6px; }
+  .menu a:not(.btn) { width: 100%; padding: 14px 4px; border-bottom: 1px solid rgba(201,162,74,.25); }
+  .menu a:not(.btn)::after { display: none; }
+  .menu .btn { margin-top: 18px; width: 100%; }
+  .menu-backdrop { display: block; position: fixed; inset: 0; z-index: 55; background: rgba(30,3,10,.45); opacity: 0; pointer-events: none; transition: opacity .3s; }
+  .menu-backdrop.open { opacity: 1; pointer-events: auto; }
+
+  /* sticky bottom quick-action bar replaces floating buttons */
+  .float-wa, .float-call { display: none; }
+  .mobile-bar { display: grid; grid-template-columns: 1fr 1.2fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    background: #fff; box-shadow: 0 -8px 24px -10px rgba(61,7,22,.35); padding: 8px 10px calc(8px + env(safe-area-inset-bottom)); gap: 8px; }
+  .mobile-bar a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 8px 4px; border-radius: 12px;
+    font-size: .78rem; font-weight: 600; color: var(--maroon); }
+  .mobile-bar a span { font-size: 1.2rem; line-height: 1; }
+  .mobile-bar .mb-wa { background: #25d366; color: #fff; }
+  body { padding-bottom: 76px; }
+}
+
+@media (max-width: 600px) {
+  section { padding: 56px 0; }
+  .section-head { margin-bottom: 32px; }
+  h2 { font-size: 2rem; }
+  .eyebrow { letter-spacing: 3px; font-size: .72rem; }
+
+  /* topbar */
+  .topbar { font-size: .74rem; padding: 6px 12px; justify-content: space-between; }
+  .tb-addr { display: none; }
+  .tb-short { display: inline; }
+
+  /* hero */
+  .hero { min-height: auto; padding: 36px 0 70px; }
+  .hero-pill { font-size: .74rem; padding: 6px 14px; }
+  .script { font-size: 1.6rem; margin-top: 12px; }
+  .hero h1 { font-size: 3.3rem; margin-bottom: 14px; }
+  .hero-sub { font-size: .95rem; margin-bottom: 22px; }
+  .hero-cta { flex-direction: column; gap: 10px; }
+  .hero-cta .btn { width: 100%; }
+  .hero-badges { gap: 6px 14px; font-size: .78rem; margin-top: 20px; }
+  .hero-visual { height: 380px; max-width: 340px; }
+  .hero-circle { width: 104px; height: 104px; left: -4%; bottom: 2%; border-width: 4px; }
+  .hero-arch { border-width: 4px; }
+  .hero-ring { transform: translate(10px, 10px); }
+  .hero-chip { right: -4%; padding: 8px 12px; }
+  .hero-chip strong { font-size: 1rem; }
+  .hero-chip span { font-size: .7rem; }
+  .scroll-hint { display: none; }
+
+  /* intro */
+  .intro-grid { gap: 40px; }
+  .intro-img { max-width: 300px; }
+  .price-note { padding: 14px 16px; gap: 12px; }
+
+  /* occasions: 2-up tiles */
+  .occ-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .occ { aspect-ratio: 3/4; border-radius: 14px; }
+  .occ-cap { padding: 12px; }
+  .occ-cap h3 { font-size: 1.1rem; }
+  .occ-cap p { display: none; }
+
+  /* collection: segmented tabs + 2-column product grid */
+  .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #fff; border-radius: 50px; padding: 4px; border: 1px solid rgba(107,15,42,.2); margin-bottom: 24px; }
+  .tab { border: 0; padding: 10px 6px; font-size: .8rem; line-height: 1.3; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .card { border-radius: 14px; display: flex; flex-direction: column; }
+  .card-img { aspect-ratio: 3/4; }
+  .tag { top: 8px; left: 8px; font-size: .6rem; padding: 3px 8px; }
+  .card-body { padding: 10px 10px 12px; display: flex; flex-direction: column; flex: 1; }
+  .card-body h3 { font-size: 1.1rem; }
+  .card-body p { font-size: .76rem; line-height: 1.45; margin: 4px 0 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .enquire { margin-top: auto; display: block; text-align: center; background: #25d366; color: #fff; border-radius: 30px; padding: 8px 6px; font-size: .74rem; }
+  .enquire:hover { color: #fff; padding-left: 6px; }
+  .no-price { font-size: 1.05rem; margin-top: 30px; }
+
+  /* steps: compact 2x2 */
+  .steps { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .step { padding: 18px 14px; }
+  .num { font-size: 2rem; }
+  .step h3 { font-size: 1.15rem; margin: 6px 0 4px; }
+  .step p { font-size: .78rem; }
+  .how::before { font-size: 16rem; }
+
+  /* gallery: 2 columns */
+  .masonry { columns: 2; column-gap: 10px; }
+  .masonry img { margin-bottom: 10px; border-radius: 10px; }
+
+  /* rules */
+  details ul { padding: 0 16px 16px 34px; font-size: .88rem; }
+  summary { font-size: 1.08rem; gap: 12px; padding: 16px 44px 16px 14px; }
+  summary span { width: 28px; height: 28px; font-size: .7rem; }
+  summary::after { right: 14px; }
+
+  /* google strip */
+  .gbp { padding: 40px 0; }
+  .gbp-inner { padding: 24px 18px; text-align: center; justify-content: center; }
+  .gbp p { margin-inline: auto; }
+  .gbp h3 { font-size: 1.6rem; }
+  .gbp-btns { width: 100%; flex-direction: column; }
+  .gbp-btns .btn { width: 100%; }
+
+  /* contact */
+  .contact-btns { flex-direction: column; }
+  .contact-btns .btn { width: 100%; }
+  .map, .map iframe { min-height: 300px; }
+
+  /* footer */
+  .footer { padding-top: 44px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 26px; }
+  .footer-grid > div:first-child, .footer-grid > div:last-child { grid-column: 1 / -1; }
+  .copy { margin-top: 30px; }
+}
+
+@media (max-width: 360px) {
+  .hero h1 { font-size: 2.8rem; }
+  .card-body h3, .occ-cap h3 { font-size: 1rem; }
+  .tab { font-size: .72rem; }
+}
+@media (max-width: 600px) { .enq-long { display: none; } }

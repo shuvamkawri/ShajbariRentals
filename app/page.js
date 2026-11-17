@@ -236,6 +236,16 @@ export default function Home() {
       </a>
       <a className="float-call" href={`tel:${site.phoneRaw}`} aria-label="Call Riwaaz Rentals">📞</a>
 
+      {/* Mobile bottom action bar */}
+      <nav className="mobile-bar" aria-label="Quick contact">
+        <a href={`tel:${site.phoneRaw}`}><span>📞</span>Call</a>
+        <a href={waLink()} className="mb-wa" {...ext}>
+          <svg viewBox="0 0 32 32" width="22" height="22" fill="#fff" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.3.7 4.6 1.9 6.5L4 29l7.7-1.9c1.3.7 2.8 1 4.3 1 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.6 16.5c-.3.7-1.5 1.4-2.1 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.3-5.1-4.5-.2-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5.2.6.8 2.1.9 2.2.1.2.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.4-.5.5-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.8.8 2.1 1 .3.2.5.2.6.3 0 .3 0 .9-.3 1.6z" /></svg>
+          WhatsApp
+        </a>
+        <a href={site.googleProfileUrl} {...ext}><span>📍</span>Directions</a>
+      </nav>
+
       <Reveal />
     </>
   );

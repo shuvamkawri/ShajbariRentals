@@ -13,7 +13,7 @@ function Card({ p }) {
         <h3>{p.title}</h3>
         <p>{p.text}</p>
         <a className="enquire" href={enquireLink(p.title)} target="_blank" rel="noopener noreferrer">
-          Enquire on WhatsApp →
+          Enquire<span className="enq-long"> on WhatsApp</span> →
         </a>
       </div>
     </article>
