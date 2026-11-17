@@ -35,8 +35,8 @@ export default function Header() {
       </div>
       <header className={`nav${scrolled ? " scrolled" : ""}`}>
         <a href="#home" className="logo">
-          <span className="logo-mark">R</span>
-          <span className="logo-text">Riwaaz <em>Rentals</em></span>
+          <span className="logo-mark">S</span>
+          <span className="logo-text">Shajbari <em>Rentals</em></span>
         </a>
         <nav className={`menu${open ? " open" : ""}`}>
           {links.map(([href, label]) => (

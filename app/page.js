@@ -27,7 +27,7 @@ export default function Home() {
           <div className="hero-content">
             <span className="hero-pill">✨ Ghatshila&apos;s Wedding Rental Studio</span>
             <p className="script">Shaadi ka har pal, royal andaaz mein</p>
-            <h1>Riwaaz <span>Rentals</span></h1>
+            <h1>Shajbari <span>Rentals</span></h1>
             <p className="hero-sub">
               Designer bridal lehengas, groom sherwanis &amp; heritage jewellery – <strong>on rent in Ghatshila</strong> for
               weddings, pre-wedding shoots, engagements, anniversaries &amp; every celebration.
@@ -68,11 +68,11 @@ export default function Home() {
             <div className="intro-frame" />
           </div>
           <div className="intro-text reveal">
-            <p className="eyebrow">Welcome to Riwaaz</p>
+            <p className="eyebrow">Welcome to Shajbari</p>
             <h2>Dress for your dream wedding, <em>the smart way</em></h2>
             <Divider />
             <p>
-              Riwaaz Rentals brings a beautiful collection of wedding wear and bridal jewellery to Ghatshila. Whether you are
+              Shajbari Rentals brings a beautiful collection of wedding wear and bridal jewellery to Ghatshila. Whether you are
               the bride, the groom, a bridesmaid or family – choose a look you love, wear it on your special day and return
               it after the celebration.
             </p>
@@ -98,7 +98,7 @@ export default function Home() {
             <p className="eyebrow">Rentals For Every Celebration</p>
             <h2>Occasions We Dress You For</h2>
             <Divider />
-            <p>From the first photoshoot to your anniversary party, Riwaaz has the right look for every occasion.</p>
+            <p>From the first photoshoot to your anniversary party, Shajbari has the right look for every occasion.</p>
           </div>
           <div className="occ-grid">
             {occasions.map((o) => (
@@ -165,7 +165,7 @@ export default function Home() {
               <span style={{ color: "#34A853" }}>l</span><span style={{ color: "#EA4335" }}>e</span>
             </div>
             <h3>Find us on Google</h3>
-            <p>Loved your Riwaaz look? Share your experience on our Google Business Profile – it helps other brides find us!</p>
+            <p>Loved your Shajbari look? Share your experience on our Google Business Profile – it helps other brides find us!</p>
           </div>
           <div className="gbp-btns">
             <a className="btn btn-gold" href={site.googleProfileUrl} {...ext}>⭐ View on Google</a>
@@ -179,11 +179,11 @@ export default function Home() {
         <div className="container contact-grid">
           <div className="contact-info reveal">
             <p className="eyebrow">Get In Touch</p>
-            <h2>Visit Riwaaz Rentals</h2>
+            <h2>Visit Shajbari Rentals</h2>
             <Divider left />
             <div className="owner">
               <div className="avatar">SK</div>
-              <div><strong>{site.owner}</strong><span>Owner, Riwaaz Rentals</span></div>
+              <div><strong>{site.owner}</strong><span>Owner, Shajbari Rentals</span></div>
             </div>
             <ul className="contact-list">
               <li><span className="ic">📞</span><div><small>Mobile / WhatsApp</small><a href={`tel:${site.phoneRaw}`}>{site.phone}</a></div></li>
@@ -197,7 +197,7 @@ export default function Home() {
             </div>
           </div>
           <div className="map reveal">
-            <iframe title="Riwaaz Rentals location – Kashida, Ghatshila" src={site.mapEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+            <iframe title="Shajbari Rentals location – Kashida, Ghatshila" src={site.mapEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
           </div>
         </div>
       </section>
@@ -206,7 +206,7 @@ export default function Home() {
       <footer className="footer">
         <div className="container footer-grid">
           <div>
-            <a href="#home" className="logo light"><span className="logo-mark">R</span><span className="logo-text">Riwaaz <em>Rentals</em></span></a>
+            <a href="#home" className="logo light"><span className="logo-mark">S</span><span className="logo-text">Shajbari <em>Rentals</em></span></a>
             <p>Wedding, pre-wedding, engagement &amp; anniversary wear and bridal jewellery on rent in Ghatshila. Look royal, spend smart.</p>
           </div>
           <div>
@@ -227,14 +227,14 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="copy">© {new Date().getFullYear()} Riwaaz Rentals, Ghatshila. All rights reserved.</div>
+        <div className="copy">© {new Date().getFullYear()} Shajbari Rentals, Ghatshila. All rights reserved.</div>
       </footer>
 
       {/* Floating buttons */}
       <a className="float-wa" href={waLink()} {...ext} aria-label="Chat on WhatsApp">
         <svg viewBox="0 0 32 32" width="30" height="30" fill="#fff"><path d="M16.04 3C9.4 3 4 8.37 4 15c0 2.34.68 4.6 1.95 6.55L4 29l7.66-1.92A12.06 12.06 0 0 0 16.04 27C22.67 27 28 21.63 28 15S22.67 3 16.04 3zm0 21.8c-1.8 0-3.56-.48-5.1-1.4l-.37-.22-4.550 1.14 1.2-4.42-.24-.38A9.7 9.7 0 0 1 5.9 15c0-5.5 4.55-9.97 10.14-9.970 5.58 0 10.1 4.47 10.1 9.970 0 5.52-4.52 9.8-10.1 9.8zm5.56-7.33c-.3-.15-1.8-.88-2.08-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.28-.47-2.43-1.5-.9-.8-1.5-1.78-1.68-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.62-.93-2.22-.24-.58-.5-.5-.68-.5h-.58c-.2 0-.53.07-.8.37-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.22 5.13 4.52.72.3 1.28.5 1.71.63.72.23 1.38.2 1.9.12.58-.09 1.8-.73 2.05-1.44.25-.7.25-1.32.18-1.44-.07-.13-.27-.2-.57-.35z" /></svg>
       </a>
-      <a className="float-call" href={`tel:${site.phoneRaw}`} aria-label="Call Riwaaz Rentals">📞</a>
+      <a className="float-call" href={`tel:${site.phoneRaw}`} aria-label="Call Shajbari Rentals">📞</a>
 
       {/* Mobile bottom action bar */}
       <nav className="mobile-bar" aria-label="Quick contact">

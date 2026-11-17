@@ -18,7 +18,7 @@ export default function Gallery() {
           <p className="eyebrow">Lookbook</p>
           <h2>Bridal Moments</h2>
           <div className="divider"><span>❖</span></div>
-          <p>A glimpse of the looks you can create with Riwaaz.</p>
+          <p>A glimpse of the looks you can create with Shajbari.</p>
         </div>
         <div className="masonry">
           {gallery.map(([file, alt]) => (

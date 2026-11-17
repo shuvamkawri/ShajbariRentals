@@ -2,19 +2,19 @@ import "./globals.css";
 import { site } from "@/lib/site";
 
 export const metadata = {
-  title: "Riwaaz Rentals | Bridal Lehenga, Sherwani & Jewellery on Rent in Ghatshila",
+  title: "Shajbari Rentals | Bridal Lehenga, Sherwani & Jewellery on Rent in Ghatshila",
   description:
-    "Riwaaz Rentals, Ghatshila – wedding, pre-wedding shoot, engagement & anniversary rentals: bridal lehengas, groom sherwanis, wedding sarees, reception gowns, bridal jewellery sets, kundan sets, maang tikka, kalire, sehra & pagdi. Call or WhatsApp 9608775136.",
+    "Shajbari Rentals, Ghatshila – wedding, pre-wedding shoot, engagement & anniversary rentals: bridal lehengas, groom sherwanis, wedding sarees, reception gowns, bridal jewellery sets, kundan sets, maang tikka, kalire, sehra & pagdi. Call or WhatsApp 9608775136.",
   keywords: [
     "lehenga on rent Ghatshila",
     "sherwani on rent Ghatshila",
     "bridal jewellery rent",
     "pre wedding shoot dress rent",
     "wedding dress rental Jharkhand",
-    "Riwaaz Rentals",
+    "Shajbari Rentals",
   ],
   openGraph: {
-    title: "Riwaaz Rentals – Wedding Wear & Jewellery on Rent, Ghatshila",
+    title: "Shajbari Rentals – Wedding Wear & Jewellery on Rent, Ghatshila",
     description: "Look royal on your big day. Bridal & groom outfits and jewellery on rent in Ghatshila.",
     type: "website",
   },
